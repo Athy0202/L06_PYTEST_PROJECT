@@ -2,50 +2,53 @@ from calculator.calculator import Calculator
 
 class TestCalculator:
     def test_add(self):
-        # arrange
+        # Arrange
         a = 4321
         b = 1234
         cal = Calculator()
 
-        # act
+        # Act
         result = cal.add(a, b)
 
-        # assert
+        # Assert
         expected = 5555
         assert result == expected
-        
+    
     def test_subtract(self):
         # Arrange
-        a = 10
-        b = 5
-        expected_result = 5
+        a = 4321
+        b = 1234
+        cal = Calculator()
 
         # Act
-        result = self.calc.subtract(a, b)
+        result = cal.subtract(a, b)
 
         # Assert
-        self.assertEqual(result, expected_result)
-        
+        expected = 3087
+        assert result == expected
+    
     def test_multiply(self):
         # Arrange
-        a = 10
-        b = 5
-        expected_result = 50
+        a = 4321
+        b = 1234
+        cal = Calculator()
 
         # Act
-        result = self.calc.multiply(a, b)
+        result = cal.multiply(a, b)
 
         # Assert
-        self.assertEqual(result, expected_result)
+        expected = 5332114
+        assert result == expected
         
     def test_divide(self):
         # Arrange
-        a = 10
-        b = 5
-        expected_result = 2
+        a = 4321
+        b = 1234
+        cal = Calculator()
 
         # Act
-        result = self.calc.divide(a, b)
+        result = cal.divide(a, b)
 
         # Assert
-        self.assertEqual(result, expected_result)
+        expected = 3.5016207455429496
+        assert result == expected
